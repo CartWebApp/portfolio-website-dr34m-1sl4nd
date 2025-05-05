@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+  }
+
+  .outside {
+    background: linear-gradient(to bottom, #2f0b72, #0c0122); 
+  }
+
+  .hanging-frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Nail styling */
+  .nail {
+    width: 10px;
+    height: 10px;
+    background-color: #333; /* Dark nail color */
+    border-radius: 50%; /* Makes it a circle */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adds depth */
+    margin-bottom: 5px; /* Space between nail and frame */
+  }
+  
+  /* Frame styling */
+  .frame {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: #f8e8c1; /* Light beige for the frame */
+    border: 2px solid #b08850; /* Frame border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    transform: rotate(-5deg); /* Slight tilt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Text inside the frame */
+  .frame p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .doorframe {
+    position: relative;
+    width: 320px; 
+    height: 420px; 
+    padding: 20px 0 0 20px;
+    background-color: #2a123d;
+    border: 5px solid #4a0986; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .door-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  
+  .door {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: #29075f;
+    border: 3px solid #4f0b9e;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); 
+    transform-origin: center right;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .left-door {
+    left: 0;
+    transform-origin: center left;
+  }
+  
+  .right-door {
+    right: 0;
+    transform-origin: center right;
+  }
+  
+  .knob {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #7b37d4;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .left-door .knob {
+    top: 50%;
+    right: 20px; /* Position near the edge of the door */
+    transform: translateY(-50%);
+  }
+  
+
+  .right-door .knob {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  .door-container.open .left-door {
+    transform: rotateY(-120deg);
+  }
+  
+  .door-container.open .right-door {
+    transform: rotateY(120deg);
+  }
+
+/* General styles for both walls */
+.half-wall {
+    position: fixed;
+    bottom: 0;
+    height: 40%;
+    width: 350px;
+    background: #370daa; /* Brick red color */
+    border: 5px solid #271b68; /* Optional darker border for texture */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Adds depth */
+    z-index: 1; /* Ensure walls stay behind interactive elements */
+  }
+  
+  /* Left wall positioned on the left side */
+  .left-wall {
+    left: 0; /* Align to the left edge */
+  }
+  
+  /* Right wall positioned on the right side */
+  .right-wall {
+    right: 0; /* Align to the right edge */
+  }
