@@ -3,6 +3,7 @@ body {
     padding: 0;
     height: 100vh; /* Full viewport height */
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
   }
 
   .outside {
@@ -52,13 +53,15 @@ body {
   }
 
   .doorframe {
-    position: relative;
+    position: absolute;
     width: 320px; 
     height: 420px; 
     padding: 20px 0 0 20px;
     background-color: #2a123d;
     border: 5px solid #4a0986; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 2s ease-in-out; /* Smooth zoom effect */
+    transform-origin: center; /* Zoom in from the center */
     animation: float 3s ease-in-out infinite; /* Floating animation */
   }
   
@@ -67,7 +70,15 @@ body {
     width: 300px;
     height: 400px;
     perspective: 1000px;
+    transition: transform 2s ease-in-out; /* Smooth zoom effect */
+    transform-origin: center; /* Zoom in from the center */
+    overflow: hidden; /* Hide overflow to create a clean zoom effect */
   }
+  .fullscreen-blackout {
+    transform: scale(10); /* Zoom the door until it fills the screen */
+    background: black; /* Ensure the screen is black once zoomed in */
+    transition: transform 2s ease-in-out, background 2s ease-in-out;
+}
   
 .interior {
   position: absolute;
@@ -87,6 +98,7 @@ body {
     transform-origin: center right;
     transition: transform 1s ease-in-out;
     z-index: 2;
+    cursor: pointer;
   }
   
   .left-door {
@@ -141,6 +153,11 @@ body {
     }
 }
 
+.fullscreen-blackout {
+    transform: scale(10); /* Zoom the door until it fills the screen */
+    background: #000; /* Ensure the screen is black once zoomed in */
+    transition: transform 2s ease-in-out, background 2s ease-in-out;
+}
 
   #stars {
     position: absolute;

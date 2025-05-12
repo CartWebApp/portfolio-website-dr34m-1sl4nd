@@ -12,6 +12,16 @@
     }, 2000); // Matches the CSS transition duration (2 seconds)
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const doorContainer = document.querySelector('.door-container');
+    const doorframe = document.querySelector('.doorframe');
+
+    doorContainer.addEventListener('click', () => {
+        doorframe.classList.add('fullscreen-blackout');
+        doorContainer.classList.add('fullscreen-blackout');
+    });
+});
+
   const canvas = document.getElementById('stars');
 const context = canvas.getContext('2d');
 
