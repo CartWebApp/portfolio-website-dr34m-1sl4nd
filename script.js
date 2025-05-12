@@ -5,7 +5,7 @@
         doorContainer.addEventListener('click', function () {
             this.classList.add('open');
             setTimeout(() => {
-                window.location.href = '/introduction.html'; // Replace with your next page's URL
+                window.location.href = '/introduction.html';
             }, 2000);
             doorContainer.classList.add('fullscreen-blackout');
         });
