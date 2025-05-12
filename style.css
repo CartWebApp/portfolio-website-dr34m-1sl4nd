@@ -13,6 +13,13 @@ body {
     align-items: center;
   }
 
+  .inside {
+    background: linear-gradient(to bottom, #000000, #0c0122);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .hanging-frame {
     position: relative;
     display: flex;

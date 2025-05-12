@@ -17,7 +17,7 @@
     const doorframe = document.querySelector('.doorframe');
 
     doorContainer.addEventListener('click', () => {
-        doorframe.classList.add('fullscreen-blackout');
+      doorframe.classList.add('fullscreen-blackout');
         doorContainer.classList.add('fullscreen-blackout');
     });
 });
