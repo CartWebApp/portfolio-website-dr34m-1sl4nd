@@ -1,26 +1,18 @@
-// Select the door container
-  const doorContainer = document.querySelector('.door-container');
-
-  // Add a click event listener
-  doorContainer.addEventListener('click', function () {
-    // Add the 'open' class to trigger animations
-    this.classList.add('open');
-
-    // Wait for the animation to complete before redirecting
-    setTimeout(() => {
-      window.location.href = '/introduction.html'; // Replace with your next page's URL
-    }, 2000); // Matches the CSS transition duration (2 seconds)
-  });
 
   document.addEventListener('DOMContentLoaded', () => {
     const doorContainer = document.querySelector('.door-container');
-    const doorframe = document.querySelector('.doorframe');
-
-    doorContainer.addEventListener('click', () => {
-      doorframe.classList.add('fullscreen-blackout');
-        doorContainer.classList.add('fullscreen-blackout');
+    if (doorContainer) {
+        doorContainer.addEventListener('click', function () {
+            this.classList.add('open');
+            setTimeout(() => {
+                window.location.href = '/introduction.html'; // Replace with your next page's URL
+            }, 2000);
+            doorContainer.classList.add('fullscreen-blackout');
+        });
+    } else {
+        console.log('no door in this page :3');
+    }
     });
-});
 
   const canvas = document.getElementById('stars');
 const context = canvas.getContext('2d');
