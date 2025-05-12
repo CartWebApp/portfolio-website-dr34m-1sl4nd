@@ -1,15 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh; /* Full viewport height */
     font-family: Arial, sans-serif;
   }
 
   .outside {
-    background: linear-gradient(to bottom, #2f0b72, #0c0122); 
+    background: linear-gradient(to bottom, #000000, #0c0122);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hanging-frame {
@@ -59,6 +59,7 @@ body {
     background-color: #2a123d;
     border: 5px solid #4a0986; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: float 3s ease-in-out infinite; /* Floating animation */
   }
   
   .door-container {
@@ -68,6 +69,14 @@ body {
     perspective: 1000px;
   }
   
+.interior {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+}
+
   .door {
     position: absolute;
     width: 150px;
@@ -77,6 +86,7 @@ body {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); 
     transform-origin: center right;
     transition: transform 1s ease-in-out;
+    z-index: 2;
   }
   
   .left-door {
@@ -100,14 +110,14 @@ body {
   
   .left-door .knob {
     top: 50%;
-    right: 20px; /* Position near the edge of the door */
+    right: 10%; /* Position near the edge of the door */
     transform: translateY(-50%);
   }
   
 
   .right-door .knob {
     top: 50%;
-    left: 20px;
+    left: 5%;
     transform: translateY(-50%);
   }
 
@@ -118,3 +128,24 @@ body {
   .door-container.open .right-door {
     transform: rotateY(120deg);
   }
+
+  @keyframes float {
+    0% {
+        transform: translateY(10px); /* Original position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+    100% {
+        transform: translateY(10px); /* Return to original position */
+    }
+}
+
+
+  #stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
