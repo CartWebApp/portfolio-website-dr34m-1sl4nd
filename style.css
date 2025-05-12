@@ -1,64 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&display=swap');
 
+:root {
+  --green: #17ebab;
+  --blue: #7bc9ff;
+  --purple: #8576ff;
+  --dark-blue: #1c1678;
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.green {
+  color: var(--green);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.dark-blue {
+  color: var(--dark-blue);
+}
+
 body {
     margin: 0;
     padding: 0;
     height: 100vh; /* Full viewport height */
     font-family: Oxanium;
     overflow: hidden; /* Prevent scrolling */
-  }
-
-  .outside {
+    color: white;
     background: linear-gradient(to bottom, #000000, #0c0122);
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .inside {
-    background: linear-gradient(to bottom, #000000, #0c0122);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hanging-frame {
-    position: relative;
+  .resume {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Nail styling */
-  .nail {
-    width: 10px;
-    height: 10px;
-    background-color: #333; /* Dark nail color */
-    border-radius: 50%; /* Makes it a circle */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adds depth */
-    margin-bottom: 5px; /* Space between nail and frame */
-  }
-  
-  /* Frame styling */
-  .frame {
-    position: relative;
-    width: 300px;
-    height: 150px;
-    background-color: #f8e8c1; /* Light beige for the frame */
-    border: 2px solid #b08850; /* Frame border */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
-    transform: rotate(-5deg); /* Slight tilt */
-    display: flex;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-  }
-  
-  /* Text inside the frame */
-  .frame p {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+    margin-left: 30vw;
+    margin-right: 30vw;
   }
 
   .doorframe {
@@ -199,89 +183,120 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 200px;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
     line-height: 100px;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 2vw;
     animation: float 3s ease-in-out infinite; /* Floating animation */
+    transition: box-shadow 0.3s;
+}
+
+.planet-img {
+  width: 80%;
+  height: 80%;
+  margin-top: 12%;
+  margin-left: 10%;
+}
+
+.small {
+  width: 10vw;
+  height: 10vw;
 }
 
 .planet.writing {
   top: 15%;
   left: 15%;
   background: linear-gradient(to bottom, #e551f8, #5d01d4);
-  transition: box-shadow 0.3s;
   animation-delay: 0s;
 }
 .planet.art { 
   top: 15%;
   right: 15%;
   background: linear-gradient(to bottom, #0ae440, #1f9e83);
-  transition: box-shadow 0.3s;
   animation-delay: 1s;
 }
 .planet.websites { 
   bottom: 15%;
   left: 45%;
   background: linear-gradient(to bottom, #ff9e0b, #e62222);
-  transition: box-shadow 0.3s;
   animation-delay: 2s;
 }
 
-.planet:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+.planet.about-me {
+  bottom: 10%;
+  right: 10%;
+  background: linear-gradient(to bottom, #321909, #b60909);
+  animation-delay: 3s;
 }
 
-.big-planet.websites {
+.planet:hover {
+    box-shadow: 0 0 2vw rgba(255, 255, 255, 0.8);
+}
+
+
+.big-planet {
   position: absolute;
   width: 500px;
   height: 500px;
   border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.big-planet.websites {
   background: linear-gradient(to bottom, #ff9e0b, #e62222);
 }
 
 .moon {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background: gray;
+  width: 8vw;
+  height: 8vw;
+  background: linear-gradient(to bottom, #d8afe6, #6850a7);
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1vw;
   animation: float 4s ease-in-out infinite;
+  transition: box-shadow 0.3s;
+}
+
+.moon:hover {
+  box-shadow: 0 0 2vw rgba(255, 255, 255, 0.8);
 }
 
 .moon:nth-child(1) {
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation-delay: 0s;
+  top: -10vw;
+  left: 7vw;
+  animation-delay: 1s;
 }
 
 .moon:nth-child(2) {
-  top: 50%;
-  left: -100px;
-  transform: translateY(-50%);
+  top: 9vw;
+  left: -10vw;
   animation-delay: 2s;
 }
 
 .moon:nth-child(3) {
-  bottom: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation-delay: 4s;
+  bottom: -10vw;
+  left: 4vw;
+  animation-delay: 5s;
 }
 
 .moon:nth-child(4) {
-  top: 50%;
-  right: -100px;
-  transform: translateY(-50%);
-  animation-delay: 6s;
+  top: 5vw;
+  right: -10vw;
+  animation-delay: 4s;
 }
 
 .moon:nth-child(5) {
-  top: 20%;
-  left: 20%;
-  animation-delay: 8s;
+  top: 20vw;
+  left: 25vw;
+  animation-delay: 3s;
 }
