@@ -234,3 +234,54 @@ body {
 .planet:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
+
+.big-planet.websites {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ff9e0b, #e62222);
+}
+
+.moon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: gray;
+  border-radius: 50%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.moon:nth-child(1) {
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+
+.moon:nth-child(2) {
+  top: 50%;
+  left: -100px;
+  transform: translateY(-50%);
+  animation-delay: 2s;
+}
+
+.moon:nth-child(3) {
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 4s;
+}
+
+.moon:nth-child(4) {
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+  animation-delay: 6s;
+}
+
+.moon:nth-child(5) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 8s;
+}
