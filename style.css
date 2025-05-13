@@ -437,7 +437,7 @@ body {
 
 .floattwo {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 10vw;
   animation-delay: -2s;
@@ -449,6 +449,30 @@ body {
   left: 80%;
   width: 10vw;
   animation-delay: -8s;
+}
+
+.floatfour {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 10vw;
+  animation-delay: -6s;
+}
+
+.floatfive {
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  width: 10vw;
+  animation-delay: -4s;
+}
+
+.floatsix {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+  width: 10vw;
+  animation-delay: -2s;
 }
 
 @keyframes spinright {
