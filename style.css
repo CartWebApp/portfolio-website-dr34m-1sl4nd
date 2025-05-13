@@ -30,7 +30,7 @@ body {
     font-family: Oxanium;
     overflow: hidden; /* Prevent scrolling */
     color: white;
-    background: linear-gradient(to bottom, #000000, #0c0122);
+    background: linear-gradient(to bottom, #000000, #2b0c6b);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,18 +52,6 @@ body {
     margin-right: 30vw;
   }
 
-  .about-me-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .about-me-container:nth-child(1) {
-    left: 5vw;
-    top: 4vw;
-  }
-
   .doorframe {
     position: absolute;
     width: 320px; 
@@ -78,7 +66,7 @@ body {
   }
   
   .artistry {
-    background: linear-gradient(to bottom, #0ae440, #1f9e83);
+    background: linear-gradient(to bottom, #3ec760, #7eebd4);
   }
 
   .sitebg {
@@ -163,13 +151,13 @@ body {
 
   @keyframes float {
     0% {
-        transform: translateY(10px); /* Original position */
+        transform: translateY(15px); /* Original position */
     }
     50% {
-        transform: translateY(-10px); /* Move up slightly */
+        transform: translateY(-15px); /* Move up slightly */
     }
     100% {
-        transform: translateY(10px); /* Return to original position */
+        transform: translateY(15px); /* Return to original position */
     }
 }
 
@@ -213,12 +201,11 @@ body {
     width: 15vw;
     height: 15vw;
     border-radius: 50%;
-    line-height: 100px;
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 2vw;
-    animation: float 3s ease-in-out infinite; /* Floating animation */
+    animation: float 7s ease-in-out infinite; /* Floating animation */
     transition: box-shadow 0.3s;
 }
 
@@ -232,32 +219,59 @@ body {
 .small {
   width: 10vw;
   height: 10vw;
+  
 }
 
 .planet.writing {
-  top: 15%;
+  top: 6%;
   left: 15%;
   background: linear-gradient(to bottom, #e551f8, #5d01d4);
   animation-delay: 0s;
 }
+
+.writtenstuffs {
+  background: linear-gradient(to bottom, #e551f8, #5d01d4);
+}
+
 .planet.art { 
   top: 15%;
   right: 15%;
   background: linear-gradient(to bottom, #0ae440, #1f9e83);
-  animation-delay: 1s;
+  animation-delay: -1s;
 }
 .planet.websites { 
   bottom: 15%;
-  left: 45%;
+  left: 35%;
   background: linear-gradient(to bottom, #ff9e0b, #e62222);
-  animation-delay: 2s;
+  animation-delay: -2s;
 }
 
 .planet.about-me {
   bottom: 10%;
   right: 10%;
   background: linear-gradient(to top, #321909, #b60909);
-  animation-delay: 3s;
+  animation-delay: -3s;
+}
+
+.planet.contact {
+  bottom: 10%;
+  left: 10%;
+  background: linear-gradient(to bottom, #aeff00, #fbd500);
+  animation-delay: -4s;
+}
+
+.planet.resume {
+  top: 25%;
+  left: 20%;
+  background: linear-gradient(to top, #0a0a0a, #3d3d3d);
+  animation-delay: -5s;
+}
+
+.raccoon {
+  position: absolute;
+  bottom: 30%;
+  right: 30%;
+  width: 3vw;
 }
 
 .planet:hover {
@@ -271,6 +285,33 @@ body {
   height: 30vw;
   border-radius: 50%;
   animation: float 3s ease-in-out infinite;
+}
+
+.big-planet.vb {
+  background: linear-gradient(to top, #00ffff, #000000);
+  top: 25%;
+  left: 10%;
+  animation-delay: -2s;
+  text-decoration: none;
+  color: #fff;
+  font-size: 4vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-planet.essay {
+  background: linear-gradient(to bottom, #aeaeae, #000000);
+  top: 25%;
+  right: 10%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 4vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .big-planet.websites {
@@ -301,31 +342,31 @@ body {
 .moon:nth-child(1) {
   top: -10vw;
   left: 7vw;
-  animation-delay: 1s;
+  animation-delay: -1s;
 }
 
 .moon:nth-child(2) {
   top: 9vw;
   left: -10vw;
-  animation-delay: 2s;
+  animation-delay: -2s;
 }
 
 .moon:nth-child(3) {
   bottom: -10vw;
   left: 4vw;
-  animation-delay: 5s;
+  animation-delay: -5s;
 }
 
 .moon:nth-child(4) {
   top: 5vw;
   right: -10vw;
-  animation-delay: 4s;
+  animation-delay: -4s;
 }
 
 .moon:nth-child(5) {
-  top: 20vw;
-  left: 25vw;
-  animation-delay: 3s;
+  top: 25vw;
+  left: 30vw;
+  animation-delay: -3s;
 }
 
 /* image container */
@@ -377,12 +418,40 @@ body {
   top: -4%;
 }
 
-.spinning-image {
-  width: 10vw;
-  animation: spin 10s linear infinite;
+.spinning-right {
+
+  animation: spinright 20s linear infinite;
 }
 
-@keyframes spin {
+.spinning-left {
+  animation: spinleft 20s linear infinite;
+}
+
+.floatone {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  width: 10vw;
+  animation-delay: -4s;
+}
+
+.floattwo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10vw;
+  animation-delay: -2s;
+}
+
+.floatthree {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  width: 10vw;
+  animation-delay: -8s;
+}
+
+@keyframes spinright {
   0% {
     transform: rotate(0deg);
   }
@@ -391,16 +460,43 @@ body {
   }
 }
 
-.about-me {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+@keyframes spinleft {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 .hobbies {
   position: absolute;
-  font-size: 5vw;
-  top: 3vw;
-  left: 2vw;
+  
+}
+
+.myinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  font-size: 2vw;
+  animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+.myinfo img {
+  width: 8vw;
+}
+
+.myinfo p {
+  margin: 1vw;
+}
+
+.phone {
+  animation: spinright 20s linear infinite;
+}
+
+.envelope {
+  animation: spinleft 20s linear infinite;
+  animation-delay: -2s;
 }
