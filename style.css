@@ -36,6 +36,13 @@ body {
     align-items: center;
   }
 
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
   .resume {
     display: flex;
     flex-direction: column;
@@ -58,6 +65,14 @@ body {
     animation: float 3s ease-in-out infinite; /* Floating animation */
   }
   
+  .artistry {
+    background: linear-gradient(to bottom, #0ae440, #1f9e83);
+  }
+
+  .sitebg {
+    background: linear-gradient(to bottom, #fffd7a, #e46612);
+  }
+
   .door-container {
     position: relative;
     width: 300px;
@@ -147,7 +162,7 @@ body {
 }
 
 .intro {
-  background: linear-gradient(to bottom, #d3461b, #a519b8);
+  background: linear-gradient(to bottom, #611bd3, #19b89e);
 }
 
 .fullscreen-blackout {
@@ -233,7 +248,7 @@ body {
 .planet.about-me {
   bottom: 10%;
   right: 10%;
-  background: linear-gradient(to bottom, #321909, #b60909);
+  background: linear-gradient(to top, #321909, #b60909);
   animation-delay: 3s;
 }
 
@@ -305,16 +320,31 @@ body {
   animation-delay: 3s;
 }
 
-/* Image container */
+/* image container */
 .image-container {
   display: flex;
-  flex-direction: row; /* For horizontal scrolling */
-  animation: scroll 10s linear infinite; /* Adjust speed as needed */
+  flex-direction: row; /* Horizontal scrolling */
+  animation: seamless-scroll 10s linear infinite; /* Smooth infinite scroll */
+  width: calc(200vw); /* Ensure container width accommodates all images */
+  margin-top: 4.5vw; /* Space above the images */
 }
 
-img {
+/* Images */
+.image-container img {
   height: 30vw;
   margin: 0 5vw; /* Space between images */
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+  border: 3px solid #fff;
+}
+
+/* Keyframes for seamless scrolling */
+@keyframes seamless-scroll {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-100vw); /* Move full viewport width */
+  }
 }
 
 .one {
@@ -333,12 +363,8 @@ img {
   background-image: url('images/fish.png');
 }
 
-/* Scrolling animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.topheader {
+  position: absolute;
+  font-size: 5vw;
+  top: -4%;
 }
