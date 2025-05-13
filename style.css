@@ -146,6 +146,10 @@ body {
     }
 }
 
+.intro {
+  background: linear-gradient(to bottom, #d3461b, #a519b8);
+}
+
 .fullscreen-blackout {
     transform: scale(10); /* Zoom the door until it fills the screen */
     background: #000; /* Ensure the screen is black once zoomed in */
@@ -240,8 +244,8 @@ body {
 
 .big-planet {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
   animation: float 3s ease-in-out infinite;
 }
@@ -299,4 +303,42 @@ body {
   top: 20vw;
   left: 25vw;
   animation-delay: 3s;
+}
+
+/* Image container */
+.image-container {
+  display: flex;
+  flex-direction: row; /* For horizontal scrolling */
+  animation: scroll 10s linear infinite; /* Adjust speed as needed */
+}
+
+img {
+  height: 30vw;
+  margin: 0 5vw; /* Space between images */
+}
+
+.one {
+  background-image: url('images/rickyart.jpeg');
+}
+
+.two {
+  background-image: url('images/zobny.jpeg');
+}
+
+.three {
+  background-image: url('images/pokesona.png');
+}
+
+.four {
+  background-image: url('images/fish.png');
+}
+
+/* Scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
