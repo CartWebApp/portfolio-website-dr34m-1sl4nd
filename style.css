@@ -161,10 +161,6 @@ body {
     }
 }
 
-.intro {
-  background: linear-gradient(to bottom, #611bd3, #19b89e);
-}
-
 .fullscreen-blackout {
     transform: scale(10); /* Zoom the door until it fills the screen */
     background: #000; /* Ensure the screen is black once zoomed in */
