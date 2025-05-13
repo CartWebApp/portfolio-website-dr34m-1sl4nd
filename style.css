@@ -52,6 +52,18 @@ body {
     margin-right: 30vw;
   }
 
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .about-me-container:nth-child(1) {
+    left: 5vw;
+    top: 4vw;
+  }
+
   .doorframe {
     position: absolute;
     width: 320px; 
@@ -363,4 +375,32 @@ body {
   position: absolute;
   font-size: 5vw;
   top: -4%;
+}
+
+.spinning-image {
+  width: 10vw;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.about-me {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.hobbies {
+  position: absolute;
+  font-size: 5vw;
+  top: 3vw;
+  left: 2vw;
 }
